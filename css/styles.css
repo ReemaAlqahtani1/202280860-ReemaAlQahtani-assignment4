@@ -801,6 +801,46 @@ textarea{
 }
 
 /* =========================
+   Social Links
+========================= */
+.social-links{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.social-links a{
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.social-links a:hover{
+  text-decoration: underline;
+}
+
+/* =========================
+   Education Section
+========================= */
+.education-box{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  max-width: 720px;
+}
+
+.education-box h3{
+  margin-top: 0;
+}
+
+.education-box p{
+  margin: .5rem 0;
+  color: var(--muted);
+}
+
+/* =========================
    Small Fade-In Animation
 ========================= */
 @keyframes fadeIn{
