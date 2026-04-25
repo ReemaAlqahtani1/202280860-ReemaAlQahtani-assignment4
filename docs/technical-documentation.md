@@ -23,7 +23,7 @@ This final version combines all previous assignments and includes major improvem
 
 ## Project Structure
 
-    assignment-4/
+    202280860-ReemaAlQahtani-assignment4/
     │
     ├── README.md
     ├── index.html
