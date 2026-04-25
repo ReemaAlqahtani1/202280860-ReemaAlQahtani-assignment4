@@ -224,7 +224,7 @@
         </div>
 
         <!-- Contact Form (Frontend only, no backend) -->
-        <form class="form" id="contactForm" novalidate>
+        <form class="form" id="contactForm" action="https://formspree.io/f/xdaybqqa" method="POST" novalidate>
 
           <div class="form-row">
             <label for="name">Name</label>
@@ -235,6 +235,11 @@
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="you@example.com" required />
           </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Portfolio Contact Message"
+          />
 
           <div class="form-row">
             <label for="message">Message</label>
