@@ -1,6 +1,6 @@
 # Technical Documentation
 
-**Assignment 4 —- Final Personal Web Application**
+**Assignment 4 — Final Personal Web Application**
 
 ------------------------------------------------------------------------
 
@@ -32,19 +32,19 @@ This final version combines all previous assignments and includes major improvem
     ├── js/
     │   └── script.js
     ├── assets/
-    |   ├── CV.pdf
+    │   ├── CV.pdf
     │   └── images/
     │       ├── profile-placeholder.png
     │       ├── project-placeholder-1.png
     │       ├── project-placeholder-2.png
     │       ├── project-placeholder-3.png
-    |       └── kfupm-logo.png
+    │       └── kfupm-logo.png
     ├── docs/
     │   ├── ai-usage-report.md
     │   └── technical-documentation.md
     ├── presentation/
-    |   ├── slides.pdf
-    |   └── demo.mp4
+    │   ├── slides.pdf
+    │   └── demo.mp4
     └── .gitignore
 
 ------------------------------------------------------------------------

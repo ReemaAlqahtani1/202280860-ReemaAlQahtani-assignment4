@@ -1,6 +1,6 @@
 # AI Usage Report
 
-**Assignment 4 —- Final Personal Web Application**
+**Assignment 4 — Final Personal Web Application**
 
 ---
 
