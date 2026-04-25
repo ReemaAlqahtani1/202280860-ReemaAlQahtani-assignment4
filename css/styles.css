@@ -458,6 +458,12 @@ a:hover{ opacity: .95; }
   font-weight: 600;
 }
 
+.unavailable-link{
+  color: var(--muted);
+  font-weight: 600;
+  opacity: .75;
+}
+
 /* =========================
    Skills Section Container
 ========================= */

@@ -62,8 +62,8 @@ const PROJECTS = [
     category: "web",
     date: "2026-02-01",
     image:"assets/images/project-placeholder-1.png",
-    demo: "#",
-    github: "#"
+    demo: null,
+    github: "https://github.com/1Sara19/Pantrix.git"
   },
   {
     title: "Horse Riding Management System",
@@ -71,8 +71,8 @@ const PROJECTS = [
     category: "database",
     date: "2025-09-15",
     image: "assets/images/project-placeholder-2.png",
-    demo: "#",
-    github: "#"
+    demo: null,
+    github: null
   },
   {
     title: "Shopping Cart Abandonment Prediction",
@@ -80,8 +80,8 @@ const PROJECTS = [
     category: "ai",
     date: "2024-09-01",
     image: "assets/images/project-placeholder-3.png",
-    demo: "#",
-    github: "#"
+    demo: null,
+    github: null
   }
 ];
 
@@ -481,8 +481,16 @@ function projectCardTemplate(project) {
         <h3>${escapeHtml(project.title)}</h3>
         <p>${escapeHtml(project.description)}</p>
         <div class="card-links">
-          <a href="${escapeHtml(project.demo)}" target="_blank" rel="noopener noreferrer">Demo</a>
-          <a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
+          ${
+            project.demo
+              ? `<a href="${escapeHtml(project.demo)}" target="_blank" rel="noopener noreferrer">Demo</a>`
+              : `<span class="unavailable-link">Demo not available</span>`
+          }
+          ${
+            project.github
+              ? `<a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+              : `<span class="unavailable-link">GitHub not available</span>`
+          }
         </div>
       </div>
     </article>
