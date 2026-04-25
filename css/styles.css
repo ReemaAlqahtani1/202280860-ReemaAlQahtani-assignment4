@@ -820,23 +820,41 @@ textarea{
 }
 
 /* =========================
+
    Education Section
+
 ========================= */
 .education-box{
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: var(--radius);
-  padding: 1.2rem;
+  padding: 1.5rem;
   box-shadow: var(--shadow);
-  max-width: 720px;
+  max-width: 800px;
+}
+
+.education-header{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.education-logo{
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
 }
 
 .education-box h3{
-  margin-top: 0;
+  margin: 0 0 .5rem 0;
 }
 
 .education-box p{
-  margin: .5rem 0;
+  margin: .35rem 0;
   color: var(--muted);
 }
 
