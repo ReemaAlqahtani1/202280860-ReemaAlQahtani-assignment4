@@ -199,7 +199,9 @@ function closeMobileNavOnLink(e) {
 /* =========================
    Contact Form Validation
 ========================= */
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
+  e.preventDefault();
+
   if (!statusEl || !form) return;
 
   const name = $("#name")?.value.trim() || "";
@@ -207,13 +209,11 @@ function handleContactSubmit(e) {
   const message = $("#message")?.value.trim() || "";
 
   if (!name || !email || !message) {
-    e.preventDefault();
     showFormMessage("Please fill out all fields.", "error");
     return;
   }
 
   if (name.length < 2) {
-    e.preventDefault();
     showFormMessage("Name must be at least 2 characters long.", "error");
     return;
   }
@@ -221,18 +221,50 @@ function handleContactSubmit(e) {
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   if (!emailOk) {
-    e.preventDefault();
     showFormMessage("Please enter a valid email address.", "error");
     return;
   }
 
   if (message.length < 10) {
-    e.preventDefault();
     showFormMessage("Message must be at least 10 characters long.", "error");
     return;
   }
 
-  showFormMessage("Message sent successfully!", "success");
+  try {
+    const response = await fetch("https://formspree.io/f/xdaybqqa", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: "New Portfolio Contact Message"
+      })
+    });
+
+    if (response.ok) {
+      showFormMessage(
+        `Thanks, ${name}! Your message has been sent successfully.`,
+        "success"
+      );
+      form.reset();
+    } else {
+      showFormMessage(
+        "Something went wrong. Please try again.",
+        "error"
+      );
+    }
+
+  } catch (error) {
+    showFormMessage(
+      "Unable to send message right now. Please try again later.",
+      "error"
+    );
+    console.error(error);
+  }
 }
 
 /* =========================
