@@ -23,7 +23,7 @@ This final version combines all previous assignments and includes major improvem
 
 ## Project Structure
 
-    assignment-3/
+    assignment-4/
     │
     ├── README.md
     ├── index.html
