@@ -182,7 +182,8 @@ This improves professionalism and real-world usability.
 The project is deployed using GitHub Pages and can be accessed here:
 
 ```text
-https://reemaalqahtani1.github.io/202280860-ReemaAlQahtani-assignment4/```
+https://reemaalqahtani1.github.io/202280860-ReemaAlQahtani-assignment4/
+```
 
 The website is publicly accessible and requires no installation.
 
